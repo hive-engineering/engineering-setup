@@ -39,6 +39,7 @@ This script automates the setup of a new engineer's development environment by i
 ### Applications
 - Docker Desktop
 - AWS VPN Client
+- TunnelBlick (VPN client for OpenVPN configurations)
 - Visual Studio Code
 
 ### Optional Components
@@ -140,6 +141,8 @@ After running the script:
 4. If you installed asdf, check [asdf documentation](https://asdf-vm.com) for usage
 
 5. For Hive repositories, check their respective README files for setup instructions
+
+6. Configure your VPN by importing your OpenVPN configuration into TunnelBlick
 
 ## Troubleshooting 🔍
 

@@ -27,6 +27,7 @@ source "$(dirname "$0")/../installers/applications.sh"
 source "$(dirname "$0")/../optional/oh-my-zsh.sh"
 source "$(dirname "$0")/../optional/asdf.sh"
 source "$(dirname "$0")/../utils/aws.sh"
+source "$(dirname "$0")/../utils/vpn.sh"
 source "$(dirname "$0")/../optional/repos.sh"
 
 #------------------------
@@ -90,7 +91,17 @@ configure_aws_cli
 clone_repositories
 
 #------------------------
-# 8. WRAP-UP
+# 8. OPTIONAL: CONFIGURE VPN
+#------------------------
+echo ""
+read -p "Would you like to see instructions for configuring TunnelBlick VPN? (y/n) " -n 1 -r
+echo ""
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    configure_vpn
+fi
+
+#------------------------
+# 9. WRAP-UP
 #------------------------
 echo "----------------------------------------------------------------"
 echo "🎉  Setup complete!"
@@ -101,4 +112,5 @@ echo "2. Verify you can run 'aws', 'docker', 'terraform', 'git' commands."
 echo "3. If you installed oh-my-zsh, customize your ~/.zshrc as desired."
 echo "4. If you installed asdf, read usage instructions at https://asdf-vm.com."
 echo "5. Check 'fc-app', 'merchant-app', 'frontend-shared' repos for README instructions."
+echo "6. Configure TunnelBlick VPN by running: ./scripts/utils/vpn.sh"
 echo "----------------------------------------------------------------" 

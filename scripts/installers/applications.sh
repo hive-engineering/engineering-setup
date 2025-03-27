@@ -28,6 +28,9 @@ install_applications() {
     # Install AWS VPN Client
     install_cask "AWS VPN Client" "aws-vpn-client" "/Applications/AWS VPN Client/AWS VPN Client.app"
 
+    # Install TunnelBlick (VPN client for OpenVPN)
+    install_cask "TunnelBlick" "tunnelblick" "/Applications/Tunnelblick.app"
+
     # Install Visual Studio Code
     install_cask "Visual Studio Code" "visual-studio-code" "/Applications/Visual Studio Code.app"
 } 
