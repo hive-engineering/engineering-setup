@@ -1,4 +1,4 @@
-# Hive Engineering Setup Script 🚀
+# Hive Engineering Setup 🚀
 
 A modular setup script for Hive Engineering that automates the installation and configuration of essential development tools on macOS.
 
